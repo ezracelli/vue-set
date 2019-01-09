@@ -26,7 +26,7 @@ export default {
   mutations: {
     setAttributeValueAtYearAndSemester(state, data) {
       let { year, semester, key, value } = data
-      set(state.obj, [year, semester, key], value, Vue.set)
+      set(state.obj, [ year, semester, key ], value, Vue.set)
 
       // state.obj is now properly reactive
     },
