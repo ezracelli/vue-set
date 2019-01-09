@@ -2,6 +2,8 @@
 
 This is a simple utility mimicking `lodash.set`, but it allows the caller to optionally pass a custom setter function like `Vue.set` (`this.$set` in components). If no setter is passed, `set` uses the assignment operator.
 
+**Note:** This module uses ES6 syntax.
+
 ## Useage
 
 ```javascript
