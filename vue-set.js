@@ -28,7 +28,8 @@ export default function (object, path, value, setter) {
     if (index === lastIndex) setter(target, key, value)
     else {
       // overwrite any non-object attributes
-      if (typeof target[key] !== 'object') setter(target, key, {})
+      if (!target[key] || typeof target[key] !== 'object')
+        setter(target, key, {})
 
       setter(target, key, Object.assign(target[key], {}))
 
